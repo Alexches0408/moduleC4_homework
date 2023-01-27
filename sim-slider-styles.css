@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+}
+
+.container{
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 480px;
+  height: 320px;
+  border: 2px solid orangered;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.slider-line {
+  width: 480px;
+  height: 320px;
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: all ease 1s;
+}
+
+.slider-prev, .slider-next {
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10px 20px;
+  border-radius: 5%;
+  border: 2px solid orangered;
+}
+
+.slider-prev:hover, .slider-next:hover {
+  background-color: orangered;
+} 
+
+#select_form{
+  background-color: beige;
+  width: 480px;
+  font-size: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#select_file{
+  display: none;
+}
+
+
+
