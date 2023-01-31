@@ -5,23 +5,18 @@ h1 {
 }
 
 .container{
-  max-width: 100%;
-  margin:0 25%;
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: center;
 }
 
 .slider {
   width: 480px;
-  height: 320px;
-  margin: 0 auto;
+  min-width: 300px;
   overflow: hidden; 
 }
 
 .slider-line {
-  width: 480px;
   height: 320px;
   display: flex;
   position: relative;
@@ -29,10 +24,15 @@ h1 {
   transition: all ease 1s;
 }
 
+.slider-line > img {
+  min-width: 100%;
+}
+
 .slider-prev, .slider-next {
   width: 130px;
   height: 50px;
   margin: 10px 20px;
+  cursor: pointer;
 }
 
 .slider-prev:hover, .slider-next:hover {
@@ -41,7 +41,7 @@ h1 {
 } 
 
 #select_form{
-  width: 930px;
+  width: 100%;
   font-size: 550px;
   background: radial-gradient(63.82% 63.82% at 50% 50%, #AFE8F4 0%, #2C7096 100%);
   border: 2px solid #595656;
@@ -53,12 +53,12 @@ h1 {
   font-weight: 700;
   font-size: 24px;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 #select_file{
   display: none;
 }
-
 
 
 
