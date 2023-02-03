@@ -126,10 +126,7 @@ document.querySelector('.library').addEventListener('click', () =>{
 })
 
 document.querySelector('.own').addEventListener('click', (ev) =>{
-    let images = document.querySelectorAll('.image_in')
-    images.forEach(element => {
-        element.remove()
-    }); 
+    
     let input2;
     input2 = document.createElement('input');
     input2.type = 'file';
@@ -138,7 +135,13 @@ document.querySelector('.own').addEventListener('click', (ev) =>{
     input2.click();
     input2.addEventListener('change', () => {
         file = input2.files;
-        handleFile(file);
+        if (file){
+            let images = document.querySelectorAll('.image_in')
+        images.forEach(element => {
+            element.remove()
+        }); 
+            handleFile(file);
+        }
     })
     input2.remove()
 });
