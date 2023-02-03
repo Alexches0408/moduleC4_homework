@@ -30,7 +30,7 @@ dropZone.addEventListener('click', ev => {
 const handleFile = file => {
     dropZone.remove()
     input.remove()
-    
+
     for (let i=0; i<file.length; i +=1){
         let image = document.createElement('img')
         image.className = 'image_in'
@@ -124,3 +124,21 @@ document.querySelector('.library').addEventListener('click', () =>{
             }
         });
 })
+
+document.querySelector('.own').addEventListener('click', (ev) =>{
+    let images = document.querySelectorAll('.image_in')
+    images.forEach(element => {
+        element.remove()
+    }); 
+    let input2;
+    input2 = document.createElement('input');
+    input2.type = 'file';
+    input2.multiple = true;
+    document.getElementsByClassName('slider-line')[0].append(input2);
+    input2.click();
+    input2.addEventListener('change', () => {
+        file = input2.files;
+        handleFile(file);
+        input2.remove()
+    })
+});
