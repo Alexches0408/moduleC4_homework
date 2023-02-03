@@ -139,6 +139,6 @@ document.querySelector('.own').addEventListener('click', (ev) =>{
     input2.addEventListener('change', () => {
         file = input2.files;
         handleFile(file);
-        input2.remove()
     })
+    input2.remove()
 });
